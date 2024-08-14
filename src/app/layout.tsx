@@ -63,7 +63,7 @@ export default function RootLayout({
                         <li><a href="about-me.html">About Me</a></li>
                         <li><a href="about-us.html">About Us</a></li>
                         <li><a href="/gallery">Gallery</a></li>
-                        <li><a href="faq.html">FAQ's</a></li>
+                        <li><a href="faq.html">FAQs</a></li>
                       </ul>
                     </li>
                     <li className="submenu">
