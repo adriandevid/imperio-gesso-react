@@ -1,12 +1,31 @@
 import Image from "next/image";
-import { library } from '@fortawesome/fontawesome-svg-core'
-import { fas, faAngleLeft, faAngleRight, faHourglass, faFlag } from '@fortawesome/free-solid-svg-icons'
+import { faAngleLeft, faAngleRight, faHourglass, faFlag } from '@fortawesome/free-solid-svg-icons'
 // import { faConnectdevelop, faFacebook, faGithub, faGooglePlus, faLinkedin, faTwitter } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faConnectdevelop, faFacebook, faTwitter, faLinkedin, faGithub, faGooglePlus } from "@fortawesome/free-brands-svg-icons";
+import { mensagem, url_send_message } from "@portfolio/consts";
 
 
 export default function Home() {
+  const servicos: { id: number, nome: string, mensagem: string }[] = [
+    {
+      id: 0,
+      nome: "Instalação de gesso",
+      mensagem
+    },
+    {
+      id: 1,
+      nome: "Projeto de Iluminação",
+      mensagem
+    },
+    {
+      id: 2,
+      nome: "Outros",
+      mensagem
+    }
+  ];
+
+  
   return (
     <>
       <div className="welcome" style={{ height: "1081px" }}>
@@ -17,7 +36,7 @@ export default function Home() {
                 <div className="welcome-text">
                   <h1>Elegância em Cada Detalhe: Forros de Gesso Artesanais</h1>
                   <p>Transformando Ambientes com o Toque Familiar e a Qualidade que Você Confia. Especialistas em Forros de Gesso há Gerações.</p>
-                  <a className="dark-btn" href="project-grid.html">
+                  <a className="dark-btn" href="/gallery">
                     <span className="show-btn">EXPLORE A GALERIA</span>
                     <span className="hide-btn">EXPLORE A GALERIA</span>
                   </a>
@@ -176,7 +195,7 @@ export default function Home() {
                   <h5 className="feature-title">Instalação de Forros de Gesso</h5>
                   <p>Oferecemos serviços completos de instalação de forros de gesso, personalizados de acordo com o design e as necessidades de cada ambiente.
                   </p>
-                  <a className="dark-btn" href="gallery.html">
+                  <a className="dark-btn" href={url_send_message.replaceAll("{mensagem}", servicos[0].mensagem)}>
                     <span className="show-btn">SOLICITAR SERVIÇO</span>
                     <span className="hide-btn">SOLICITAR SERVIÇO</span>
                   </a>
@@ -188,7 +207,7 @@ export default function Home() {
                   <h5 className="feature-title">Projetos de Iluminação Embutida</h5>
                   <p>Especializamos na integração de iluminação embutida em forros de gesso, criando efeitos visuais que valorizam e modernizam os ambientes.
                   </p>
-                  <a className="dark-btn" href="gallery.html">
+                  <a className="dark-btn" href={url_send_message.replaceAll("{mensagem}", servicos[1].mensagem)}>
                     <span className="show-btn">SOLICITAR SERVIÇO</span>
                     <span className="hide-btn">SOLICITAR SERVIÇO</span>
                   </a>
@@ -198,8 +217,8 @@ export default function Home() {
                 <div className="parallax-item">
                   <FontAwesomeIcon icon={faFlag}></FontAwesomeIcon>
                   <h5 className="feature-title">Outros</h5>
-                  <p>Reparos e Manutenção de Forros, Sancas de Gesso e Molduras Decorativas, Divisórias e Revestimentos de Gesso, Consultoria.</p>
-                  <a className="dark-btn" href="gallery.html">
+                  <p>Forneçemos outros serviços como: Reparos e Manutenção de Forros, Sancas de Gesso e Molduras Decorativas, Divisórias e Revestimentos de Gesso, Consultoria, etc.</p>
+                  <a className="dark-btn" href={url_send_message.replaceAll("{mensagem}", servicos[2].mensagem)}>
                     <span className="show-btn">SOLICITAR SERVIÇO</span>
                     <span className="hide-btn">SOLICITAR SERVIÇO</span>
                   </a>
@@ -232,7 +251,7 @@ export default function Home() {
                       style={{ overflow: "hidden", position: "relative" }}>
                       <div className="imgfix_wrapper_layer zoom"
                         style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
-                        <img src="/images/1(1).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
+                        <Image width={200} height={200} src="/images/1(1).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
                       </div>
                     </a>
                   </div>
@@ -241,7 +260,7 @@ export default function Home() {
                       style={{ overflow: "hidden", position: "relative" }}>
                       <div className="imgfix_wrapper_layer zoom"
                         style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
-                        <img src="/images/2(1).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
+                        <Image width={200} height={200} src="/images/2(1).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
                       </div>
                     </a>
                   </div>
@@ -251,7 +270,7 @@ export default function Home() {
             <div className="offset-lg-1 col-lg-6 col-md-12 col-sm-12 align-self-center"
               data-scroll-reveal="enter right move 30px over 0.6s after 0.3s" data-scroll-reveal-id="1"
               data-scroll-reveal-initialized="true" data-scroll-reveal-complete="true">
-              <img src="/images/3(1).jpg" className="img-fluid float-right" alt="Title" />
+              <Image width={800} height={700} src="/images/3(1).jpg" className="img-fluid float-right" alt="Title" />
             </div>
           </div>
         </div>
@@ -314,7 +333,7 @@ export default function Home() {
             <div className="col-lg-4 col-md-6 col-sm-12 position-relative">
               <div className="person-item">
                 <div className="img">
-                  <img src="/images/person-1.jpg" alt="" />
+                  <Image width={150} height={150} src="/images/person-1.jpg" alt="" />
                 </div>
                 <div className="content">
                   <div className="text">
@@ -334,7 +353,7 @@ export default function Home() {
             <div className="col-lg-4 col-md-6 col-sm-12 position-relative">
               <div className="person-item active">
                 <div className="img">
-                  <img src="/images/person-2.jpg" alt="" />
+                  <Image width={150} height={150} src="/images/person-2.jpg" alt="" />
                 </div>
                 <div className="content">
                   <div className="text">
@@ -354,7 +373,7 @@ export default function Home() {
             <div className="col-lg-4 col-md-6 col-sm-12 position-relative">
               <div className="person-item">
                 <div className="img">
-                  <img src="/images/person-1.jpg" alt="" />
+                  <Image width={150} height={150} src="/images/person-1.jpg" alt="" />
                 </div>
                 <div className="content">
                   <div className="text">
@@ -394,7 +413,7 @@ export default function Home() {
 
             <div className="col-lg-4 col-md-6 col-sm-12">
               <a href="blog-single.html" className="blog-post-grid imgfix_top_container" style={{ overflow: "hidden" }}><div id="imgfix_wrapper_layer_0_0" className="imgfix_wrapper_layer" style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
-                <img src="/images/1(3).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
+                <Image width={200} height={200} src="/images/1(3).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
                 <div className="content">
                   <h3>Chief clubhouse for female executives opens in Boston</h3>
                   <div className="date">APR 09</div>
@@ -404,7 +423,7 @@ export default function Home() {
 
             <div className="col-lg-4 col-md-6 col-sm-12">
               <a href="blog-single.html" className="blog-post-grid imgfix_top_container" style={{ overflow: "hidden" }}><div id="imgfix_wrapper_layer_0_1" className="imgfix_wrapper_layer" style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
-                <img src="/images/2(3).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
+                <Image width={200} height={200} src="/images/2(3).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
                 <div className="content">
                   <h3>A hotel in the heart of Copenhagen’s Latin Quarter</h3>
                   <div className="date">APR 09</div>
@@ -414,7 +433,7 @@ export default function Home() {
 
             <div className="col-lg-4 col-md-6 col-sm-12">
               <a href="blog-single.html" className="blog-post-grid imgfix_top_container" style={{ overflow: "hidden" }}><div id="imgfix_wrapper_layer_0_2" className="imgfix_wrapper_layer" style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
-                <img src="/images/3(3).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
+                <Image width={200} height={200} src="/images/3(3).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
                 <div className="content">
                   <h3>Skandium’s eco townhouse for LDF18 with Montana</h3>
                   <div className="date">APR 09</div>
