@@ -30,7 +30,10 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.css" />
+        <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-1181 35390-1"></script>
         {/* <link rel="stylesheet" href="/js/fontawesome/css/all.css" /> */}
+
       </head>
 
       <body>
@@ -60,10 +63,10 @@ export default function RootLayout({
                     <li className="submenu">
                       <a href="javascript:;">Pages</a>
                       <ul>
-                        <li><a href="about-me.html">About Me</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
+                        {/* <li><a href="about-me.html">About Me</a></li> */}
+                        <li><a href="/about">About Us</a></li>
                         <li><a href="/gallery">Gallery</a></li>
-                        <li><a href="faq.html">FAQs</a></li>
+                        {/* <li><a href="faq.html">FAQs</a></li> */}
                       </ul>
                     </li>
                     <li className="submenu">
@@ -85,7 +88,7 @@ export default function RootLayout({
         </header>
 
         {children}
-
+        
         <footer>
           <div className="container">
             <div className="row">
@@ -139,14 +142,17 @@ export default function RootLayout({
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/js/all.min.js"></Script>
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.2.0/jquery.magnific-popup.min.js" ></Script>
         <Script src="https://unpkg.com/scrollreveal"></Script>
+        <Script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></Script>
         <Script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></Script>
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.0/jquery.waypoints.min.js"></Script>
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></Script>
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" ></Script>
-
+        <Script src="http://maps.google.com/maps/api/js?key=AIzaSyAthC_2x5GtKhiH7rUumkMbwvp31qyFyA8"></Script>
+        <Script src="/js/map-script.js"></Script>	
         <Script src="/libs/imgfixmaster/js/imgfix.min.js"></Script>
 
         <Script src="/js/index.js" ></Script>
+        
       </body>
 
     </html>

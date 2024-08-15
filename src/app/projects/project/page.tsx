@@ -37,7 +37,7 @@ export default function Page() {
                                     <div className="row margin-bottom-90">
                                         <div className="col-lg-6 col-md-12 col-sm-12 align-self-center">
                                             <div className="page-single-img">
-                                                    <Image src="/images/single-project/1.jpg" className="img-fluid float-left" alt="" />
+                                                    <Image priority={true} width={600} height={600} src="/images/single-project/1.jpg" className="img-fluid float-left" alt="" />
                                                     <a href="https://www.youtube.com/watch?v=dPZTh2NKTm4" className="play">
                                                         <i className="fa fa-play"></i>
                                                     </a>
@@ -88,7 +88,7 @@ export default function Page() {
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden"}}>
 
-                                                    <Image src="/images/single-project/1.jpg" alt="" />
+                                                    <Image priority={true} width={200} height={200} src="/images/single-project/1.jpg" alt="" />
                                                 </div>
                                             </a>
                                         </div>
@@ -98,7 +98,7 @@ export default function Page() {
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
 
-                                                    <Image src="/images/single-project/2.jpg" alt="" />
+                                                    <Image priority={true} width={200} height={200} src="/images/single-project/2.jpg" alt="" />
                                                 </div>
                                             </a>
                                         </div>
@@ -108,7 +108,7 @@ export default function Page() {
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
 
-                                                    <Image src="/images/single-project/3.jpg" alt="" />
+                                                    <Image priority={true} width={200} height={200} src="/images/single-project/3.jpg" alt="" />
                                                 </div>
                                             </a>
                                         </div>
@@ -118,7 +118,7 @@ export default function Page() {
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
 
-                                                    <Image src="/images/single-project/4.jpg" alt="" />
+                                                    <Image priority={true} width={200} height={200} src="/images/single-project/4.jpg" alt="" />
                                                 </div>
                                             </a>
                                         </div>
@@ -128,7 +128,7 @@ export default function Page() {
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
 
-                                                    <Image src="/images/single-project/5.jpg" alt="" />
+                                                    <Image priority={true} width={200} height={200} src="/images/single-project/5.jpg" alt="" />
                                                 </div>
                                             </a>
                                         </div>
@@ -138,7 +138,7 @@ export default function Page() {
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
 
-                                                    <Image src="/images/single-project/6.jpg" alt="" />
+                                                    <Image priority={true} width={200} height={200} src="/images/single-project/6.jpg" alt="" />
                                                 </div>
                                             </a>
                                         </div>
@@ -148,7 +148,7 @@ export default function Page() {
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
 
-                                                    <Image src="/images/single-project/7.jpg" alt="" />
+                                                    <Image priority={true} width={200} height={200} src="/images/single-project/7.jpg" alt="" />
                                                 </div>
                                             </a>
                                         </div>
@@ -158,7 +158,7 @@ export default function Page() {
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
 
-                                                    <Image src="/images/single-project/8.jpg" alt="" />
+                                                    <Image priority={true} width={200} height={200} src="/images/single-project/8.jpg" alt="" />
                                                 </div>
                                             </a>
                                         </div>
@@ -195,7 +195,7 @@ export default function Page() {
                         <div className="col-lg-4 col-md-6 col-sm-12">
                             <a href="project-single.html" className="project-grid-item">
                                 <div className="img">
-                                    <Image src="/images/single-project/1.jpg" alt="" />
+                                    <Image priority={true} width={200} height={200} src="/images/single-project/1.jpg" alt="" />
                                 </div>
                                 <div className="text">
                                     <h3>MODERN KITCHENS</h3>
@@ -207,7 +207,7 @@ export default function Page() {
                         <div className="col-lg-4 col-md-6 col-sm-12">
                             <a href="project-single.html" className="project-grid-item">
                                 <div className="img">
-                                    <Image src="/images/single-project/2.jpg" alt="" />
+                                    <Image priority={true} width={200} height={200} src="/images/single-project/2.jpg" alt="" />
                                 </div>
                                 <div className="text">
                                     <h3>MODERN BATHROOM</h3>
@@ -219,7 +219,7 @@ export default function Page() {
                         <div className="col-lg-4 col-md-6 col-sm-12">
                             <a href="project-single.html" className="project-grid-item">
                                 <div className="img">
-                                    <Image src="/images/single-project/3.jpg" alt="" />
+                                    <Image priority={true} width={200} height={200} src="/images/single-project/3.jpg" alt="" />
                                 </div>
                                 <div className="text">
                                     <h3>DECORATIVE CHAIR</h3>

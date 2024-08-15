@@ -35,7 +35,7 @@ export default function Page() {
                                     <div className="col-lg-4 col-md-6 col-sm-12">
                                         <a href="/projects/project" className="project-grid-item">
                                             <div className="img">
-                                                <Image src="/images/projects/1.jpg" alt="" />
+                                                <Image priority={true} width={150} height={150} src="/images/projects/1.jpg" alt="" />
                                             </div>
                                             <div className="text">
                                                 <h3>MODERN KITCHENS</h3>
@@ -47,7 +47,7 @@ export default function Page() {
                                     <div className="col-lg-4 col-md-6 col-sm-12">
                                         <a href="/projects/project" className="project-grid-item">
                                             <div className="img">
-                                                <Image src="/images/projects/2.jpg" alt="" />
+                                                <Image priority={true} width={200} height={200} src="/images/projects/2.jpg" alt="" />
                                             </div>
                                             <div className="text">
                                                 <h3>MODERN BATHROOM</h3>
@@ -59,7 +59,7 @@ export default function Page() {
                                     <div className="col-lg-4 col-md-6 col-sm-12">
                                         <a href="/projects/project" className="project-grid-item">
                                             <div className="img">
-                                                <Image src="/images/projects/3.jpg" alt="" />
+                                                <Image priority={true} width={200} height={200} src="/images/projects/3.jpg" alt="" />
                                             </div>
                                             <div className="text">
                                                 <h3>DECORATIVE CHAIR</h3>
@@ -71,7 +71,7 @@ export default function Page() {
                                     <div className="col-lg-4 col-md-6 col-sm-12">
                                         <a href="/projects/project" className="project-grid-item">
                                             <div className="img">
-                                                <Image src="/images/projects/4.jpg" alt="" />
+                                                <Image priority={true} width={200} height={200} src="/images/projects/4.jpg" alt="" />
                                             </div>
                                             <div className="text">
                                                 <h3>ROOMS CABINETRY</h3>
@@ -83,7 +83,7 @@ export default function Page() {
                                     <div className="col-lg-4 col-md-6 col-sm-12">
                                         <a href="/projects/project" className="project-grid-item">
                                             <div className="img">
-                                                <Image src="/images/projects/5.jpg" alt="" />
+                                                <Image priority={true} width={200} height={200} src="/images/projects/5.jpg" alt="" />
                                             </div>
                                             <div className="text">
                                                 <h3>MODERN ROOMS</h3>
@@ -95,7 +95,7 @@ export default function Page() {
                                     <div className="col-lg-4 col-md-6 col-sm-12">
                                         <a href="/projects/project" className="project-grid-item">
                                             <div className="img">
-                                                <Image src="/images/projects/6.jpg" alt="" />
+                                                <Image priority={true} width={200} height={200} src="/images/projects/6.jpg" alt="" />
                                             </div>
                                             <div className="text">
                                                 <h3>MINIMAL OFFICES</h3>
@@ -107,7 +107,7 @@ export default function Page() {
                                     <div className="col-lg-4 col-md-6 col-sm-12">
                                         <a href="/projects/project" className="project-grid-item">
                                             <div className="img">
-                                                <Image src="/images/projects/7.jpg" alt="" />
+                                                <Image priority={true} width={200} height={200} src="/images/projects/7.jpg" alt="" />
                                             </div>
                                             <div className="text">
                                                 <h3>MODERN KITCHENS</h3>
@@ -119,7 +119,7 @@ export default function Page() {
                                     <div className="col-lg-4 col-md-6 col-sm-12">
                                         <a href="/projects/project" className="project-grid-item">
                                             <div className="img">
-                                                <Image src="/images/projects/8.jpg" alt="" />
+                                                <Image priority={true} width={200} height={200} src="/images/projects/8.jpg" alt="" />
                                             </div>
                                             <div className="text">
                                                 <h3>WORKING PLACES</h3>
@@ -131,7 +131,7 @@ export default function Page() {
                                     <div className="col-lg-4 col-md-6 col-sm-12">
                                         <a href="/projects/project" className="project-grid-item">
                                             <div className="img">
-                                                <Image src="/images/projects/9.jpg" alt="" />
+                                                <Image priority={true} width={200} height={200} src="/images/projects/9.jpg" alt="" />
                                             </div>
                                             <div className="text">
                                                 <h3>MODERN BEDROOMS</h3>

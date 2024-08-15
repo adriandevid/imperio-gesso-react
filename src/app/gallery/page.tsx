@@ -35,7 +35,7 @@ export default function Page() {
                                                 style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden"}}>
-                                                    <Image src="/images/gallery/1.jpg" alt="" style={{ opacity: "1" }} />
+                                                    <Image priority={true} width={200} height={200} src="/images/gallery/1.jpg" alt="" style={{ opacity: "1" }} />
                                                 </div>
                                             </a>
                                         </div>
@@ -44,7 +44,7 @@ export default function Page() {
                                                 style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden"}}>
-                                                    <Image src="/images/gallery/2.jpg" alt="" style={{ opacity: "1" }} />
+                                                    <Image priority={true} width={200} height={200} src="/images/gallery/2.jpg" alt="" style={{ opacity: "1" }} />
                                                 </div>
                                             </a>
                                         </div>
@@ -53,7 +53,7 @@ export default function Page() {
                                                 style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden"}}>
-                                                    <Image src="/images/gallery/3.jpg" alt="" style={{ opacity: "1" }} />
+                                                    <Image priority={true} width={200} height={200} src="/images/gallery/3.jpg" alt="" style={{ opacity: "1" }} />
                                                 </div>
                                             </a>
                                         </div>
@@ -62,7 +62,7 @@ export default function Page() {
                                                 style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden"}}>
-                                                    <Image src="/images/gallery/4.jpg" alt="" style={{ opacity: "1" }} />
+                                                    <Image priority={true} width={200} height={200} src="/images/gallery/4.jpg" alt="" style={{ opacity: "1" }} />
                                                 </div>
                                             </a>
                                         </div>
@@ -71,7 +71,7 @@ export default function Page() {
                                                 style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden"}}>
-                                                    <Image src="/images/gallery/5.jpg" alt="" style={{ opacity: "1" }} />
+                                                    <Image priority={true} width={200} height={200} src="/images/gallery/5.jpg" alt="" style={{ opacity: "1" }} />
                                                 </div>
                                             </a>
                                         </div>
@@ -80,7 +80,7 @@ export default function Page() {
                                                 style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden"}}>
-                                                    <Image src="/images/gallery/6.jpg" alt="" style={{ opacity: "1" }} />
+                                                    <Image priority={true} width={200} height={200} src="/images/gallery/6.jpg" alt="" style={{ opacity: "1" }} />
                                                 </div>
                                             </a>
                                         </div>
@@ -89,7 +89,7 @@ export default function Page() {
                                                 style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden"}}>
-                                                    <Image src="/images/gallery/7.jpg" alt="" style={{ opacity: "1" }} />
+                                                    <Image priority={true} width={200} height={200} src="/images/gallery/7.jpg" alt="" style={{ opacity: "1" }} />
                                                 </div>
                                             </a>
                                         </div>
@@ -98,7 +98,7 @@ export default function Page() {
                                                 style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden"}}>
-                                                    <Image src="/images/gallery/8.jpg" alt="" style={{ opacity: "1" }} />
+                                                    <Image priority={true} width={200} height={200} src="/images/gallery/8.jpg" alt="" style={{ opacity: "1" }} />
                                                 </div>
                                             </a>
                                         </div>
@@ -107,7 +107,7 @@ export default function Page() {
                                                 style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden"}}>
-                                                    <Image src="/images/gallery/9.jpg" alt="" style={{ opacity: "1" }} />
+                                                    <Image priority={true} width={200} height={200} src="/images/gallery/9.jpg" alt="" style={{ opacity: "1" }} />
                                                 </div>
                                             </a>
                                         </div>
@@ -116,7 +116,7 @@ export default function Page() {
                                                 style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden"}}>
-                                                    <Image src="/images/gallery/10.jpg" alt="" style={{ opacity: "1" }} />
+                                                    <Image priority={true} width={200} height={200} src="/images/gallery/10.jpg" alt="" style={{ opacity: "1" }} />
                                                 </div>
                                             </a>
                                         </div>
@@ -125,7 +125,7 @@ export default function Page() {
                                                 style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden"}}>
-                                                    <Image src="/images/gallery/11.jpg" alt="" style={{ opacity: "1" }} />
+                                                    <Image priority={true} width={200} height={200} src="/images/gallery/11.jpg" alt="" style={{ opacity: "1" }} />
                                                 </div>
                                             </a>
                                         </div>
@@ -134,7 +134,7 @@ export default function Page() {
                                                 style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden"}}>
-                                                    <Image src="/images/gallery/12.jpg" alt="" style={{ opacity: "1" }} />
+                                                    <Image priority={true} width={200} height={200} src="/images/gallery/12.jpg" alt="" style={{ opacity: "1" }} />
                                                 </div>
                                             </a>
                                         </div>
@@ -144,7 +144,7 @@ export default function Page() {
                                                 style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden"}}>
-                                                    <Image src="/images/gallery/13.jpg" alt="" style={{ opacity: "1" }} />
+                                                    <Image priority={true} width={200} height={200} src="/images/gallery/13.jpg" alt="" style={{ opacity: "1" }} />
                                                 </div>
                                             </a>
                                         </div>
@@ -153,7 +153,7 @@ export default function Page() {
                                                 style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden"}}>
-                                                    <Image src="/images/gallery/14.jpg" alt="" style={{ opacity: "1" }} />
+                                                    <Image priority={true} width={200} height={200} src="/images/gallery/14.jpg" alt="" style={{ opacity: "1" }} />
                                                 </div>
                                             </a>
                                         </div>
@@ -162,7 +162,7 @@ export default function Page() {
                                                 style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden"}}>
-                                                    <Image src="/images/gallery/15.jpg" alt="" style={{ opacity: "1" }} />
+                                                    <Image priority={true} width={200} height={200} src="/images/gallery/15.jpg" alt="" style={{ opacity: "1" }} />
                                                 </div>
                                             </a>
                                         </div>
@@ -171,7 +171,7 @@ export default function Page() {
                                                 style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden"}}>
-                                                    <Image src="/images/gallery/16.jpg" alt="" style={{ opacity: "1" }} />
+                                                    <Image priority={true} width={200} height={200} src="/images/gallery/16.jpg" alt="" style={{ opacity: "1" }} />
                                                 </div>
                                             </a>
                                         </div>

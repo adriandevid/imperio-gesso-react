@@ -251,7 +251,7 @@ export default function Home() {
                       style={{ overflow: "hidden", position: "relative" }}>
                       <div className="imgfix_wrapper_layer zoom"
                         style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
-                        <Image width={200} height={200} src="/images/1(1).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
+                        <Image priority={true} width={200} height={200} src="/images/1(1).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
                       </div>
                     </a>
                   </div>
@@ -260,7 +260,7 @@ export default function Home() {
                       style={{ overflow: "hidden", position: "relative" }}>
                       <div className="imgfix_wrapper_layer zoom"
                         style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
-                        <Image width={200} height={200} src="/images/2(1).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
+                        <Image priority={true} width={200} height={200} src="/images/2(1).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
                       </div>
                     </a>
                   </div>
@@ -270,7 +270,7 @@ export default function Home() {
             <div className="offset-lg-1 col-lg-6 col-md-12 col-sm-12 align-self-center"
               data-scroll-reveal="enter right move 30px over 0.6s after 0.3s" data-scroll-reveal-id="1"
               data-scroll-reveal-initialized="true" data-scroll-reveal-complete="true">
-              <Image width={800} height={700} src="/images/3(1).jpg" className="img-fluid float-right" alt="Title" />
+              <Image priority={true} width={800} height={700} src="/images/3(1).jpg" className="img-fluid float-right" alt="Title" />
             </div>
           </div>
         </div>
@@ -333,7 +333,7 @@ export default function Home() {
             <div className="col-lg-4 col-md-6 col-sm-12 position-relative">
               <div className="person-item">
                 <div className="img">
-                  <Image width={150} height={150} src="/images/person-1.jpg" alt="" />
+                  <Image priority={true} width={150} height={150} src="/images/person-1.jpg" alt="" />
                 </div>
                 <div className="content">
                   <div className="text">
@@ -353,7 +353,7 @@ export default function Home() {
             <div className="col-lg-4 col-md-6 col-sm-12 position-relative">
               <div className="person-item active">
                 <div className="img">
-                  <Image width={150} height={150} src="/images/person-2.jpg" alt="" />
+                  <Image priority={true} width={150} height={150} src="/images/person-2.jpg" alt="" />
                 </div>
                 <div className="content">
                   <div className="text">
@@ -373,7 +373,7 @@ export default function Home() {
             <div className="col-lg-4 col-md-6 col-sm-12 position-relative">
               <div className="person-item">
                 <div className="img">
-                  <Image width={150} height={150} src="/images/person-1.jpg" alt="" />
+                  <Image priority={true} width={150} height={150} src="/images/person-1.jpg" alt="" />
                 </div>
                 <div className="content">
                   <div className="text">
@@ -413,7 +413,7 @@ export default function Home() {
 
             <div className="col-lg-4 col-md-6 col-sm-12">
               <a href="blog-single.html" className="blog-post-grid imgfix_top_container" style={{ overflow: "hidden" }}><div id="imgfix_wrapper_layer_0_0" className="imgfix_wrapper_layer" style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
-                <Image width={200} height={200} src="/images/1(3).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
+                <Image priority={true} width={200} height={200} src="/images/1(3).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
                 <div className="content">
                   <h3>Chief clubhouse for female executives opens in Boston</h3>
                   <div className="date">APR 09</div>
@@ -423,7 +423,7 @@ export default function Home() {
 
             <div className="col-lg-4 col-md-6 col-sm-12">
               <a href="blog-single.html" className="blog-post-grid imgfix_top_container" style={{ overflow: "hidden" }}><div id="imgfix_wrapper_layer_0_1" className="imgfix_wrapper_layer" style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
-                <Image width={200} height={200} src="/images/2(3).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
+                <Image priority={true} width={200} height={200} src="/images/2(3).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
                 <div className="content">
                   <h3>A hotel in the heart of Copenhagen’s Latin Quarter</h3>
                   <div className="date">APR 09</div>
@@ -433,7 +433,7 @@ export default function Home() {
 
             <div className="col-lg-4 col-md-6 col-sm-12">
               <a href="blog-single.html" className="blog-post-grid imgfix_top_container" style={{ overflow: "hidden" }}><div id="imgfix_wrapper_layer_0_2" className="imgfix_wrapper_layer" style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
-                <Image width={200} height={200} src="/images/3(3).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
+                <Image priority={true} width={200} height={200} src="/images/3(3).jpg" alt="" className="imgfix_src_img" style={{ opacity: 1 }} />
                 <div className="content">
                   <h3>Skandium’s eco townhouse for LDF18 with Montana</h3>
                   <div className="date">APR 09</div>
