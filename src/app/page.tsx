@@ -4,9 +4,12 @@ import { faAngleLeft, faAngleRight, faHourglass, faFlag } from '@fortawesome/fre
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faConnectdevelop, faFacebook, faTwitter, faLinkedin, faGithub, faGooglePlus } from "@fortawesome/free-brands-svg-icons";
 import { mensagem, url_send_message } from "@portfolio/consts";
+import { useRouter } from "next/navigation";
 
 
 export default function Home() {
+  // const router = useRouter();
+
   const servicos: { id: number, nome: string, mensagem: string }[] = [
     {
       id: 0,
@@ -195,7 +198,7 @@ export default function Home() {
                   <h5 className="feature-title">Instalação de Forros de Gesso</h5>
                   <p>Oferecemos serviços completos de instalação de forros de gesso, personalizados de acordo com o design e as necessidades de cada ambiente.
                   </p>
-                  <a className="dark-btn" href={"http://localhost:3000/projects/request"}>
+                  <a className="dark-btn" href={`/projects/request`}>
                     <span className="show-btn">SOLICITAR SERVIÇO</span>
                     <span className="hide-btn">SOLICITAR SERVIÇO</span>
                   </a>
@@ -207,7 +210,7 @@ export default function Home() {
                   <h5 className="feature-title">Projetos de Iluminação Embutida</h5>
                   <p>Especializamos na integração de iluminação embutida em forros de gesso, criando efeitos visuais que valorizam e modernizam os ambientes.
                   </p>
-                  <a className="dark-btn" href={"http://localhost:3000/projects/request"}>
+                  <a className="dark-btn" href={`/projects/request`}>
                     <span className="show-btn">SOLICITAR SERVIÇO</span>
                     <span className="hide-btn">SOLICITAR SERVIÇO</span>
                   </a>
@@ -218,7 +221,7 @@ export default function Home() {
                   <FontAwesomeIcon icon={faFlag}></FontAwesomeIcon>
                   <h5 className="feature-title">Outros</h5>
                   <p>Forneçemos outros serviços como: Reparos e Manutenção de Forros, Sancas de Gesso e Molduras Decorativas, Divisórias e Revestimentos de Gesso, Consultoria, etc.</p>
-                  <a className="dark-btn" href={"http://localhost:3000/projects/request"}>
+                  <a className="dark-btn" href={`/projects/request`}>
                     <span className="show-btn">SOLICITAR SERVIÇO</span>
                     <span className="hide-btn">SOLICITAR SERVIÇO</span>
                   </a>
