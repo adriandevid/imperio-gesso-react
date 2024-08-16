@@ -78,7 +78,7 @@ export default function Page() {
                                             <label htmlFor="descricao">Descrição: </label>
                                             <textarea className="!mb-[0]" name="descricao" placeholder="Descrição do serviço"></textarea>
                                         </div>
-                                        <div className="flex w-full justify-end gap-2">
+                                        <div className="flex w-full justify-end gap-2 mt-2">
                                             <button className="dark-btn float-right border-green-400" type="submit">
                                                 <span className="show-btn !text-green-400"><FontAwesomeIcon icon={faWhatsapp} fontSize={15}></FontAwesomeIcon> Solicitar Via Whatsapp</span>
                                                 <span className="hide-btn !bg-green-400"><FontAwesomeIcon icon={faWhatsapp} fontSize={15}></FontAwesomeIcon> Solicitar Via Whatsapp</span>
