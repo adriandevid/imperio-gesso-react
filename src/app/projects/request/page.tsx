@@ -52,21 +52,31 @@ export default function Page() {
                                     <div className="flex flex-wrap gap-2">
                                         <div className="flex flex-col gap-2 w-full">
                                             <div className="w-full">
-                                                    <label htmlFor="link">Serviço: </label>
-                                                    <input type="text" name="link" defaultValue={"Forro Simples"} disabled></input>
-                                                </div>
+                                                <label htmlFor="link">Serviço: </label>
+                                                <input type="text" name="link" defaultValue={"Forro Simples"} disabled></input>
+                                            </div>
                                             <div>
                                                 <label htmlFor="link">Descrição: </label>
-                                                <textarea name="link" defaultValue={`Duis aute irure dolor reprehenderit in voluptate velit essle cillum dolore eu fugiat nulla pariatur. Excepteur sint ocaec at cupdatat proident suntin culpa qui officia.`} disabled></textarea>
+                                                <textarea className="!mb-[0]" name="link" defaultValue={`Duis aute irure dolor reprehenderit in voluptate velit essle cillum dolore eu fugiat nulla pariatur. Excepteur sint ocaec at cupdatat proident suntin culpa qui officia.`} disabled></textarea>
                                             </div>
                                         </div>
-                                        <input type="text" placeholder="Seu nome" />
+                                        <div className="w-full">
+                                            <label htmlFor="nome">Nome: </label>
+                                            <input name="nome" type="text" placeholder="Seu nome" />
+                                        </div>
                                         <div className="flex gap-2 w-full">
-                                            <input className="flex-1" type="text" placeholder="E-Mail" />
-                                            <input className="flex-1" type="text" placeholder="Telefone" />
+                                            <div className="w-full">
+                                                <label htmlFor="email">Email: </label>
+                                                <input name="email" className="flex-1" type="text" placeholder="E-Mail" />
+                                            </div>
+                                            <div className="w-full">
+                                                <label htmlFor="telefone">Telefone: </label>
+                                                <input name="telefone" className="flex-1" type="text" placeholder="Telefone" />
+                                            </div>
                                         </div>
                                         <div className="w-full">
-                                            <textarea placeholder="Descrição do serviço"></textarea>
+                                            <label htmlFor="descricao">Descrição: </label>
+                                            <textarea className="!mb-[0]" name="descricao" placeholder="Descrição do serviço"></textarea>
                                         </div>
                                         <div className="flex w-full justify-end gap-2">
                                             <button className="dark-btn float-right border-green-400" type="submit">
