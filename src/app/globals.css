@@ -2459,9 +2459,9 @@ contact
   resize: none;
   padding: 20px;
 }
-.contact-bottom .contact-form .dark-btn .show-btn {
+/* .contact-bottom .contact-form .dark-btn .show-btn {
   background: #f5f5f5;
-}
+} */
 
 @media (max-width: 991px) {
   .contact {

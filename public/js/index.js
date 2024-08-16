@@ -151,7 +151,12 @@
 			}
 		});
 	}
-	
+	$(".preloader-wrapper").css("visibility", "hidden").fadeOut();
+
+	$(".preloader-wrapper").animate({
+		'opacity': '0'
+	}, 600, function(){ });
+
 	// Page loading animation
 	$(window).ready(function() {
 		
@@ -172,12 +177,6 @@
 			imageSrc: '/images/parallax-2.jpg',
 			zIndex: '1'
 		});
-
-		$(".preloader-wrapper").css("visibility", "hidden").fadeOut();
-
-		$(".preloader-wrapper").animate({
-			'opacity': '0'
-		}, 600, function(){ });
 	});
 
 

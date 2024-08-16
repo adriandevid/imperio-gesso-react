@@ -195,7 +195,7 @@ export default function Home() {
                   <h5 className="feature-title">Instalação de Forros de Gesso</h5>
                   <p>Oferecemos serviços completos de instalação de forros de gesso, personalizados de acordo com o design e as necessidades de cada ambiente.
                   </p>
-                  <a className="dark-btn" href={url_send_message.replaceAll("{mensagem}", servicos[0].mensagem)}>
+                  <a className="dark-btn" href={"http://localhost:3000/projects/request"}>
                     <span className="show-btn">SOLICITAR SERVIÇO</span>
                     <span className="hide-btn">SOLICITAR SERVIÇO</span>
                   </a>
@@ -207,7 +207,7 @@ export default function Home() {
                   <h5 className="feature-title">Projetos de Iluminação Embutida</h5>
                   <p>Especializamos na integração de iluminação embutida em forros de gesso, criando efeitos visuais que valorizam e modernizam os ambientes.
                   </p>
-                  <a className="dark-btn" href={url_send_message.replaceAll("{mensagem}", servicos[1].mensagem)}>
+                  <a className="dark-btn" href={"http://localhost:3000/projects/request"}>
                     <span className="show-btn">SOLICITAR SERVIÇO</span>
                     <span className="hide-btn">SOLICITAR SERVIÇO</span>
                   </a>
@@ -218,7 +218,7 @@ export default function Home() {
                   <FontAwesomeIcon icon={faFlag}></FontAwesomeIcon>
                   <h5 className="feature-title">Outros</h5>
                   <p>Forneçemos outros serviços como: Reparos e Manutenção de Forros, Sancas de Gesso e Molduras Decorativas, Divisórias e Revestimentos de Gesso, Consultoria, etc.</p>
-                  <a className="dark-btn" href={url_send_message.replaceAll("{mensagem}", servicos[2].mensagem)}>
+                  <a className="dark-btn" href={"http://localhost:3000/projects/request"}>
                     <span className="show-btn">SOLICITAR SERVIÇO</span>
                     <span className="hide-btn">SOLICITAR SERVIÇO</span>
                   </a>

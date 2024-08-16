@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import "owl.carousel/dist/assets/owl.carousel.min.css";
 import Script from "next/script";
-import { faFacebook, faTwitter, faLinkedin, faGooglePlus, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faFacebook, faTwitter, faLinkedin, faGooglePlus, faGithub, faWhatsapp, faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // const inter = Inter({ subsets: ["latin"] });
@@ -38,9 +38,9 @@ export default function RootLayout({
 
       <body>
         <div className="preloader-wrapper">
-            <div className="loader"></div>
+          <div className="loader"></div>
         </div>
-      
+
         <header className="header-area">
           <div className="container">
             <div className="row">
@@ -51,7 +51,7 @@ export default function RootLayout({
                   </a>
 
                   <ul className="nav">
-                    <li><a href="/">Home</a></li>
+                    <li><a href="/">Inicio</a></li>
                     <li className="submenu">
                       <a href="javascript:;">Projetos</a>
                       <ul>
@@ -76,7 +76,8 @@ export default function RootLayout({
                         <li><a href="blog-single.html">Blog Single</a></li>
                       </ul>
                     </li>
-                    <li><a className="contact-btn" href="contact.html">Contact</a></li>
+                    <li><a className="contact-btn" href="contact">Contate-nos</a></li>
+                    {/* <li><a href=""><FontAwesomeIcon className="text-green-400" icon={faWhatsappSquare} fontSize={35}></FontAwesomeIcon></a></li> */}
                   </ul>
                   <a className="menu-trigger">
                     <span>Menu</span>
@@ -88,7 +89,7 @@ export default function RootLayout({
         </header>
 
         {children}
-        
+
         <footer>
           <div className="container">
             <div className="row">
@@ -148,11 +149,11 @@ export default function RootLayout({
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></Script>
         <Script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" ></Script>
         <Script src="http://maps.google.com/maps/api/js?key=AIzaSyAthC_2x5GtKhiH7rUumkMbwvp31qyFyA8"></Script>
-        <Script src="/js/map-script.js"></Script>	
+        <Script src="/js/map-script.js"></Script>
         <Script src="/libs/imgfixmaster/js/imgfix.min.js"></Script>
 
         <Script src="/js/index.js" ></Script>
-        
+
       </body>
 
     </html>

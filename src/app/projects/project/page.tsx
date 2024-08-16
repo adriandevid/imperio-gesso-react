@@ -1,11 +1,13 @@
 
+import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 
 export default function Page() {
     return (
         <>
             <section className="page">
-                
+
                 <div className="cover" data-image="/images/single-project/cover.jpg">
                     <div className="cover-top">
                         <div className="container">
@@ -26,9 +28,9 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-                
 
-                
+
+
                 <div className="page-bottom">
                     <div className="container">
                         <div className="row">
@@ -37,10 +39,10 @@ export default function Page() {
                                     <div className="row margin-bottom-90">
                                         <div className="col-lg-6 col-md-12 col-sm-12 align-self-center">
                                             <div className="page-single-img">
-                                                    <Image priority={true} width={600} height={600} src="/images/single-project/1.jpg" className="img-fluid float-left" alt="" />
-                                                    <a href="https://www.youtube.com/watch?v=dPZTh2NKTm4" className="play">
-                                                        <i className="fa fa-play"></i>
-                                                    </a>
+                                                <Image priority={true} width={600} height={600} src="/images/single-project/1.jpg" className="img-fluid float-left" alt="" />
+                                                <a href="https://www.youtube.com/watch?v=dPZTh2NKTm4" className="play">
+                                                    <i className="fa fa-play"></i>
+                                                </a>
                                             </div>
                                         </div>
                                         <div className="col-lg-6 col-md-12 col-sm-12 align-self-center">
@@ -78,6 +80,16 @@ export default function Page() {
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <div className="flex w-full justify-end gap-2 mt-5">
+                                                    <button className="dark-btn float-right border-green-400" type="submit">
+                                                        <span className="show-btn !text-green-400"><FontAwesomeIcon icon={faWhatsapp} fontSize={15}></FontAwesomeIcon> Solicitar Via Whatsapp</span>
+                                                        <span className="hide-btn !bg-green-400"><FontAwesomeIcon icon={faWhatsapp} fontSize={15}></FontAwesomeIcon> Solicitar Via Whatsapp</span>
+                                                    </button>
+                                                    <button className="dark-btn float-right" type="submit">
+                                                        <span className="show-btn">Solicitar</span>
+                                                        <span className="hide-btn">Solicitar</span>
+                                                    </button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -86,7 +98,7 @@ export default function Page() {
                                             <a href="/images/single-project/1.jpg" className="page-gallery"
                                                 style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
-                                                    style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden"}}>
+                                                    style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
 
                                                     <Image priority={true} width={200} height={200} src="/images/single-project/1.jpg" alt="" />
                                                 </div>
@@ -94,7 +106,7 @@ export default function Page() {
                                         </div>
                                         <div className="col-lg-3 col-md-6 col-sm-6 col-6">
                                             <a href="/images/single-project/2.jpg" className="page-gallery"
-                                                style={{ overflow: "hidden", position: "relative"}}>
+                                                style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
 
@@ -104,7 +116,7 @@ export default function Page() {
                                         </div>
                                         <div className="col-lg-3 col-md-6 col-sm-6 col-6">
                                             <a href="/images/single-project/3.jpg" className="page-gallery"
-                                                style={{ overflow: "hidden", position: "relative"}}>
+                                                style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
 
@@ -114,7 +126,7 @@ export default function Page() {
                                         </div>
                                         <div className="col-lg-3 col-md-6 col-sm-6 col-6">
                                             <a href="/images/single-project/4.jpg" className="page-gallery"
-                                                style={{ overflow: "hidden", position: "relative"}}>
+                                                style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
 
@@ -124,7 +136,7 @@ export default function Page() {
                                         </div>
                                         <div className="col-lg-3 col-md-6 col-sm-6 col-6">
                                             <a href="/images/single-project/5.jpg" className="page-gallery"
-                                                style={{ overflow: "hidden", position: "relative"}}>
+                                                style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
 
@@ -134,7 +146,7 @@ export default function Page() {
                                         </div>
                                         <div className="col-lg-3 col-md-6 col-sm-6 col-6">
                                             <a href="/images/single-project/6.jpg" className="page-gallery"
-                                                style={{ overflow: "hidden", position: "relative"}}>
+                                                style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
 
@@ -144,7 +156,7 @@ export default function Page() {
                                         </div>
                                         <div className="col-lg-3 col-md-6 col-sm-6 col-6">
                                             <a href="/images/single-project/7.jpg" className="page-gallery"
-                                                style={{ overflow: "hidden", position: "relative"}}>
+                                                style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
 
@@ -154,7 +166,7 @@ export default function Page() {
                                         </div>
                                         <div className="col-lg-3 col-md-6 col-sm-6 col-6">
                                             <a href="/images/single-project/8.jpg" className="page-gallery"
-                                                style={{ overflow: "hidden", position: "relative"}}>
+                                                style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
                                                     style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
 
@@ -168,14 +180,14 @@ export default function Page() {
                         </div>
                     </div>
                 </div>
-                
+
             </section>
 
 
-            
+
             <section className="section white">
                 <div className="container">
-                    
+
                     <div className="row">
                         <div className="col-lg-12">
                             <div className="center-heading">
@@ -189,7 +201,7 @@ export default function Page() {
                             </div>
                         </div>
                     </div>
-                    
+
 
                     <div className="row project-grid">
                         <div className="col-lg-4 col-md-6 col-sm-12">
