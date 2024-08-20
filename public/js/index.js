@@ -139,17 +139,17 @@
 		// 	scale: 1.1
 		// })
 
-		$('.page-gallery').magnificPopup({
-			type: 'image',
-			gallery: {
-				enabled: true
-			},
-			zoom: {
-				enabled: true,
-				duration: 300,
-				easing: 'ease-in-out',
-			}
-		});
+		// $('.page-gallery').magnificPopup({
+		// 	type: 'image',
+		// 	gallery: {
+		// 		enabled: true
+		// 	},
+		// 	zoom: {
+		// 		enabled: true,
+		// 		duration: 300,
+		// 		easing: 'ease-in-out',
+		// 	}
+		// });
 	}
 	$(".preloader-wrapper").css("visibility", "hidden").fadeOut();
 

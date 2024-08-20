@@ -5,28 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faConnectdevelop, faFacebook, faTwitter, faLinkedin, faGithub, faGooglePlus } from "@fortawesome/free-brands-svg-icons";
 import { mensagem, url_send_message } from "@portfolio/consts";
 import { useRouter } from "next/navigation";
+import { PrismaClient } from "@prisma/client";
 
 
-export default function Home() {
+export default async function Home() {
   // const router = useRouter();
-
-  const servicos: { id: number, nome: string, mensagem: string }[] = [
-    {
-      id: 0,
-      nome: "Instalação de gesso",
-      mensagem
-    },
-    {
-      id: 1,
-      nome: "Projeto de Iluminação",
-      mensagem
-    },
-    {
-      id: 2,
-      nome: "Outros",
-      mensagem
-    }
-  ];
+  const prisma  = new PrismaClient();
+  const services = await prisma.services.findMany();
 
   
   return (
@@ -63,17 +48,39 @@ export default function Home() {
 
               <div className="owl-stage-outer">
                 <div className="owl-stage" style={{ transform: "translate3d(-1194px, 0px, 0px)", transition: "all", width: "4381px" }}>
-                  <div className="owl-item cloned" style={{ width: "368.2px", marginRight: "30px", }}>
-                    <div className="item">
-                      <div className="img" style={{ backgroundImage: "url(/images/gesso/1.png)", backgroundPosition: "top", backgroundSize: "cover", height: "20rem", width: "100%", backgroundRepeat: "no-repeat" }}>
-                      </div>
-                      <div className="text">
-                        <h5>Veneer Kitchen</h5>
-                        <p>Mauris sagittis feugiat dui vel varius.</p>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="owl-item cloned" style={{ width: "368.2px", marginRight: "30px", }}>
+                  {
+                    services.map(function(service, index) {
+                      return (
+                        <div className="owl-item" style={{ width: "368.2px", marginRight: "30px", }}>
+                          <div className="item">
+                            <div className="img" style={{ backgroundImage: `url(${service.image})`, backgroundPosition: "top", backgroundSize: "cover", height: "20rem", width: "100%", backgroundRepeat: "no-repeat" }}>
+                            </div>
+                            <div className="text">
+                              <h5>{service.title}</h5>
+                              <p>{service.description.substring(0, 100)}...</p>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    })
+                  }
+                  {
+                    services.map(function(service, index) {
+                      return (
+                        <div className={`owl-item ${index == 0 ? "firstActiveItem" : ""} cloned`} style={{ width: "368.2px", marginRight: "30px", }}>
+                          <div className="item">
+                            <div className="img" style={{ backgroundImage: `url(${service.image})`, backgroundPosition: "top", backgroundSize: "cover", height: "20rem", width: "100%", backgroundRepeat: "no-repeat" }}>
+                            </div>
+                            <div className="text">
+                              <h5>{service.title}</h5>
+                              <p>{service.description.substring(0, 50)}...</p>
+                            </div>
+                          </div>
+                        </div>
+                      )
+                    })
+                  }
+                  {/* <div className="owl-item cloned" style={{ width: "368.2px", marginRight: "30px", }}>
                     <div className="item">
                       <div className="img" style={{ backgroundImage: "url(/images/gesso/4.jpg)", backgroundPosition: "top", backgroundSize: "cover", height: "20rem", width: "100%", backgroundRepeat: "no-repeat" }}>
                       </div>
@@ -172,7 +179,7 @@ export default function Home() {
                         <p>Mauris sagittis feugiat dui vel varius.</p>
                       </div>
                     </div>
-                  </div>
+                  </div> */}
                 </div>
               </div>
               <div className="owl-nav disabled"><button type="button" role="presentation" className="owl-prev"><span

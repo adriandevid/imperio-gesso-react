@@ -1,0 +1,25 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model products {
+  id          Int    @id @default(autoincrement())
+  title       String @db.VarChar(200)
+  description String @db.VarChar(200)
+  price       String @db.VarChar(20)
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model services {
+  id          Int     @id @default(autoincrement())
+  title       String  @db.VarChar(200)
+  subtitle    String? @db.VarChar(200)
+  description String
+  image       String  @db.VarChar(200)
+}

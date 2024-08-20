@@ -1,9 +1,20 @@
 
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { PrismaClient } from "@prisma/client";
 import Image from "next/image";
 
-export default function Page() {
+export default async function Page({ params }: { params: { projectId: string } }) {
+    const prisma = new PrismaClient();
+    const services = await prisma.services.findMany({
+        take: 8
+    });
+    const service = await prisma.services.findFirstOrThrow({
+        where: {
+            id: parseInt(params.projectId)
+        }
+    });
+
     return (
         <>
             <section className="page">
@@ -39,7 +50,7 @@ export default function Page() {
                                     <div className="row margin-bottom-90">
                                         <div className="col-lg-6 col-md-12 col-sm-12 align-self-center">
                                             <div className="page-single-img">
-                                                <Image priority={true} width={600} height={600} src="/images/single-project/1.jpg" className="img-fluid float-left" alt="" />
+                                                <Image priority={true} width={600} height={600} src={service.image} className="img-fluid float-left" alt="" />
                                                 <a href="https://www.youtube.com/watch?v=dPZTh2NKTm4" className="play">
                                                     <i className="fa fa-play"></i>
                                                 </a>
@@ -47,11 +58,9 @@ export default function Page() {
                                         </div>
                                         <div className="col-lg-6 col-md-12 col-sm-12 align-self-center">
                                             <div className="page-single-text">
-                                                <h5 className="title">MODERN ROOMS</h5>
+                                                <h5 className="title">{service.title}</h5>
                                                 <h6 className="sub-title">Automate & Simplify The Whole Process</h6>
-                                                <p>Duis aute irure dolor reprehenderit in voluptate velit essle cillum dolore eu
-                                                    fugiat nulla pariatur. Excepteur sint ocaec at cupdatat proident suntin
-                                                    culpa qui officia.</p>
+                                                <p>{service.description}</p>
                                                 <div className="info-list">
                                                     <div className="row">
                                                         <div className="col-lg-6 col-md-6 col-sm-12">
@@ -94,17 +103,24 @@ export default function Page() {
                                         </div>
                                     </div>
                                     <div className="row page-gallery-wrapper">
-                                        <div className="col-lg-3 col-md-6 col-sm-6 col-6">
-                                            <a href="/images/single-project/1.jpg" className="page-gallery"
-                                                style={{ overflow: "hidden", position: "relative" }}>
-                                                <div className="imgfix_wrapper_layer zoom"
-                                                    style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
+                                        {
+                                            services.map(function (service) {
+                                                return (
+                                                    <div className="col-lg-3 col-md-6 col-sm-6 col-6">
+                                                        <a href={`/projects/project/${service.id}`} className="page-gallery"
+                                                            style={{ overflow: "hidden", position: "relative" }}>
+                                                            <div className="imgfix_wrapper_layer zoom"
+                                                                style={{ position: "relative", padding: "0", margin: "0", width: "100%", height: "100%", overflow: "hidden" }}>
 
-                                                    <Image priority={true} width={200} height={200} src="/images/single-project/1.jpg" alt="" />
-                                                </div>
-                                            </a>
-                                        </div>
-                                        <div className="col-lg-3 col-md-6 col-sm-6 col-6">
+                                                                <div className="img" style={{ backgroundImage: `url(${service.image})`, backgroundPosition: "top", backgroundSize: "cover", height: "15rem", width: "100%", backgroundRepeat: "no-repeat" }}>
+                                                                </div>
+                                                            </div>
+                                                        </a>
+                                                    </div>
+                                                )
+                                            })
+                                        }
+                                        {/* <div className="col-lg-3 col-md-6 col-sm-6 col-6">
                                             <a href="/images/single-project/2.jpg" className="page-gallery"
                                                 style={{ overflow: "hidden", position: "relative" }}>
                                                 <div className="imgfix_wrapper_layer zoom"
@@ -173,7 +189,7 @@ export default function Page() {
                                                     <Image priority={true} width={200} height={200} src="/images/single-project/8.jpg" alt="" />
                                                 </div>
                                             </a>
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
                             </div>

@@ -1,25 +1,11 @@
-import { createKysely } from '@vercel/postgres-kysely';
-import { Generated } from 'kysely';
+import { PrismaClient, Prisma } from '@prisma/client';
 
-interface ServiceTable {
-    id: Generated<number>;
-    title: string;
-    subtitle: string;
-    description: string;
-    image: string;
-}
-
-interface Database {
-    Services: ServiceTable;
-}
-
+const prisma = new PrismaClient()
 
 export async function GET(request: Request) {
+    
 
-    const db = createKysely<Database>();
-    const person = await db
-        .selectFrom("Services")
-        .selectAll().execute();
-    console.log(person)
-    return Response.json({ person })
+    const services = await prisma.services.findMany();
+
+    return Response.json(services)
 }
