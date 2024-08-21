@@ -1,15 +1,20 @@
 import { faWhatsapp, faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { PrismaClient } from "@prisma/client";
 import Image from "next/image";
+import Link from "next/link";
 
-export default function Page() {
-    const service = {
-        title: "Forro Simples",
-        description: "O forro simples geralmente é mais barato, sendo o valor calculado por metro quadrado no valor de 20 reais o metro.",
-        pricePerMeter: "20",
-        imageReference: "/images/1.jpg"
-    }
+export default async function Page({ params }: { params: { projectId: string } }) {
+    const prisma = new PrismaClient();
 
+    const services = await prisma.services.findMany({
+        take: 8
+    });
+    const service = await prisma.services.findFirstOrThrow({
+        where: {
+            id: parseInt(params.projectId)
+        }
+    });
 
     return (
         <section className="page">
@@ -53,11 +58,11 @@ export default function Page() {
                                         <div className="flex flex-col gap-2 w-full">
                                             <div className="w-full">
                                                 <label htmlFor="link">Serviço: </label>
-                                                <input type="text" name="link" defaultValue={"Forro Simples"} disabled></input>
+                                                <input type="text" name="link" defaultValue={service.title} disabled></input>
                                             </div>
                                             <div>
                                                 <label htmlFor="link">Descrição: </label>
-                                                <textarea className="!mb-[0]" name="link" defaultValue={`Duis aute irure dolor reprehenderit in voluptate velit essle cillum dolore eu fugiat nulla pariatur. Excepteur sint ocaec at cupdatat proident suntin culpa qui officia.`} disabled></textarea>
+                                                <textarea className="!mb-[0]" name="link" defaultValue={service.description} disabled></textarea>
                                             </div>
                                         </div>
                                         <div className="w-full">
@@ -79,10 +84,12 @@ export default function Page() {
                                             <textarea className="!mb-[0]" name="descricao" placeholder="Descrição do serviço"></textarea>
                                         </div>
                                         <div className="flex w-full justify-end gap-2 mt-2">
-                                            <button className="dark-btn float-right border-green-400" type="submit">
-                                                <span className="show-btn !text-green-400"><FontAwesomeIcon icon={faWhatsapp} fontSize={15}></FontAwesomeIcon> Solicitar Via Whatsapp</span>
-                                                <span className="hide-btn !bg-green-400"><FontAwesomeIcon icon={faWhatsapp} fontSize={15}></FontAwesomeIcon> Solicitar Via Whatsapp</span>
-                                            </button>
+                                            <Link href={"https://wa.me/5579998152202?text=Tenho%20interesse%20em%20comprar%20seu%20carro"}>
+                                                <button className="dark-btn float-right border-green-400">
+                                                    <span className="show-btn !text-green-400"><FontAwesomeIcon icon={faWhatsapp} fontSize={15}></FontAwesomeIcon> Solicitar Via Whatsapp</span>
+                                                    <span className="hide-btn !bg-green-400"><FontAwesomeIcon icon={faWhatsapp} fontSize={15}></FontAwesomeIcon> Solicitar Via Whatsapp</span>
+                                                </button>
+                                            </Link>
                                             <button className="dark-btn float-right" type="submit">
                                                 <span className="show-btn">Solicitar</span>
                                                 <span className="hide-btn">Solicitar</span>

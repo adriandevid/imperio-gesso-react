@@ -40,7 +40,7 @@ export default async function Page(props: any) {
                                         services.map(function (service) {
                                             return (
                                                 <div className="col-lg-4 col-md-6 col-sm-12">
-                                                    <a href="/projects/project" className="project-grid-item">
+                                                    <a href={`/projects/project/${service.id}`} className="project-grid-item">
                                                         <div className="img" style={{ backgroundImage: `url(${service.image})`, backgroundPosition: "top", backgroundSize: "cover", height: "15rem", width: "100%", backgroundRepeat: "no-repeat" }}>
                                                         </div>
                                                         <div className="text">

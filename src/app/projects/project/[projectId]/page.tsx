@@ -3,9 +3,12 @@ import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { PrismaClient } from "@prisma/client";
 import Image from "next/image";
+import Link from "next/link";
 
 export default async function Page({ params }: { params: { projectId: string } }) {
+
     const prisma = new PrismaClient();
+
     const services = await prisma.services.findMany({
         take: 8
     });
@@ -49,27 +52,34 @@ export default async function Page({ params }: { params: { projectId: string } }
                                 <div className="page-single">
                                     <div className="row margin-bottom-90">
                                         <div className="col-lg-6 col-md-12 col-sm-12 align-self-center">
-                                            <div className="page-single-img">
-                                                <Image priority={true} width={600} height={600} src={service.image} className="img-fluid float-left" alt="" />
-                                                <a href="https://www.youtube.com/watch?v=dPZTh2NKTm4" className="play">
+                                            <div className="page-single-img ">
+                                                <Image priority={true} quality={100} width={600} height={600} src={service.image} className="img-fluid float-left zoom" alt="" />
+                                                {/* <a href="https://www.youtube.com/watch?v=dPZTh2NKTm4" className="play">
                                                     <i className="fa fa-play"></i>
-                                                </a>
+                                                </a> */}
                                             </div>
                                         </div>
                                         <div className="col-lg-6 col-md-12 col-sm-12 align-self-center">
                                             <div className="page-single-text">
-                                                <h5 className="title">{service.title}</h5>
-                                                <h6 className="sub-title">Automate & Simplify The Whole Process</h6>
+                                                <h4 className="title">{service.title}</h4>
+                                                {
+                                                    service.subtitle != undefined ?
+                                                        <h6 className="sub-title">Automate & Simplify The Whole Process</h6> :
+                                                        <></>
+                                                }
                                                 <p>{service.description}</p>
-                                                <div className="info-list">
-                                                    <div className="row">
-                                                        <div className="col-lg-6 col-md-6 col-sm-12">
-                                                            <strong>Location: </strong>
-                                                            <span>New York</span>
-                                                        </div>
-                                                        <div className="col-lg-6 col-md-6 col-sm-12">
-                                                            <strong>Year: </strong>
-                                                            <span>2021</span>
+                                                <div>
+                                                    <p className="!mb-2 !text-[14px]"><strong>publicação: </strong></p>
+                                                    <div className="info-list">
+                                                        <div className="row">
+                                                            <div className="col-lg-6 col-md-6 col-sm-12 gap-2 flex">
+                                                                <strong>Localização: </strong>
+                                                                <span>Sergipe - Brasil</span>
+                                                            </div>
+                                                            <div className="col-lg-6 col-md-6 col-sm-12 flex gap-2">
+                                                                <strong>Ano: </strong>
+                                                                <span>2021</span>
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -77,27 +87,31 @@ export default async function Page({ params }: { params: { projectId: string } }
                                                     <div className="row">
                                                         <div className="col-lg-4 col-md-4 col-sm-12 count-item">
                                                             <strong>96</strong>
-                                                            <span>Active Users</span>
+                                                            <span>Horas de trabalho (média)</span>
                                                         </div>
                                                         <div className="col-lg-4 col-md-4 col-sm-12  count-item">
                                                             <strong>190</strong>
-                                                            <span>Active Team</span>
+                                                            <span>Quantidade de pessoas envolvidas</span>
                                                         </div>
                                                         <div className="col-lg-4 col-md-4 col-sm-12 count-item">
                                                             <strong>12</strong>
-                                                            <span>Active Staff</span>
+                                                            <span>Tempo de Preparação e Limpeza (média)</span>
                                                         </div>
                                                     </div>
                                                 </div>
                                                 <div className="flex w-full justify-end gap-2 mt-5">
-                                                    <button className="dark-btn float-right border-green-400" type="submit">
-                                                        <span className="show-btn !text-green-400"><FontAwesomeIcon icon={faWhatsapp} fontSize={15}></FontAwesomeIcon> Solicitar Via Whatsapp</span>
-                                                        <span className="hide-btn !bg-green-400"><FontAwesomeIcon icon={faWhatsapp} fontSize={15}></FontAwesomeIcon> Solicitar Via Whatsapp</span>
-                                                    </button>
-                                                    <button className="dark-btn float-right" type="submit">
-                                                        <span className="show-btn">Solicitar</span>
-                                                        <span className="hide-btn">Solicitar</span>
-                                                    </button>
+                                                    <Link href={"https://wa.me/5579998152202?text=Tenho%20interesse%20em%20comprar%20seu%20carro"}>
+                                                        <button className="dark-btn float-right border-green-400" type="submit">
+                                                            <span className="show-btn !text-green-400"><FontAwesomeIcon icon={faWhatsapp} fontSize={15}></FontAwesomeIcon> Solicitar Via Whatsapp</span>
+                                                            <span className="hide-btn !bg-green-400"><FontAwesomeIcon icon={faWhatsapp} fontSize={15}></FontAwesomeIcon> Solicitar Via Whatsapp</span>
+                                                        </button>
+                                                    </Link>
+                                                    <Link href={`/projects/request/${service.id}`}>
+                                                        <button className="dark-btn float-right" type="submit">
+                                                            <span className="show-btn">Solicitar</span>
+                                                            <span className="hide-btn">Solicitar</span>
+                                                        </button>
+                                                    </Link>
                                                 </div>
                                             </div>
                                         </div>
