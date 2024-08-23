@@ -13,6 +13,20 @@ create table products(
 	price varchar(20) not null
 );
 
+create table requests(
+	id serial not null,
+	service_id int4 not null,
+	email varchar(100) not null,
+	phone varchar(20) not null,
+	name_people varchar(100) not null
+);
+
+alter table services add primary key (id);
+alter table products add primary key (id);
+alter table requests add primary key (id);
+
+alter table requests add constraint service_fkey foreign key (service_id) references services(id);
+
 
 insert into services(title, description, image) 
 values (
@@ -39,7 +53,7 @@ values (
 insert into services(title, description, image) 
 values (
 	'Forro de Gesso com Rasgo de Luz', 
-	'É um estilo que permite a instalação de fitas de LED embutidas em “rasgos” no forro, proporcionando uma iluminação indireta e moderna.', 
+	'É um estilo que permite a instalação de fitas de LED embutidas em “rasgos�? no forro, proporcionando uma iluminação indireta e moderna.', 
 	'https://htilqjbghnvmjfsj.public.blob.vercel-storage.com/projects/12-zNEv78sdpt5jXMnymcAITgwgJXcbW9.jpg'
 );
 

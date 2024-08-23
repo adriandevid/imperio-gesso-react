@@ -100,13 +100,13 @@ export default async function Page({ params }: { params: { projectId: string } }
                                                     </div>
                                                 </div>
                                                 <div className="flex w-full justify-end gap-2 mt-5">
-                                                    <Link href={"https://wa.me/5579998152202?text=Tenho%20interesse%20em%20comprar%20seu%20carro"}>
+                                                    <Link target="__blank" href={"https://wa.me/5579998152202?text=Tenho%20interesse%20em%20comprar%20seu%20carro"}>
                                                         <button className="dark-btn float-right border-green-400" type="submit">
                                                             <span className="show-btn !text-green-400"><FontAwesomeIcon icon={faWhatsapp} fontSize={15}></FontAwesomeIcon> Solicitar Via Whatsapp</span>
                                                             <span className="hide-btn !bg-green-400"><FontAwesomeIcon icon={faWhatsapp} fontSize={15}></FontAwesomeIcon> Solicitar Via Whatsapp</span>
                                                         </button>
                                                     </Link>
-                                                    <Link href={`/projects/request/${service.id}`}>
+                                                    <Link target="__blank" replace={true} href={`/projects/request/${service.id}`}>
                                                         <button className="dark-btn float-right" type="submit">
                                                             <span className="show-btn">Solicitar</span>
                                                             <span className="hide-btn">Solicitar</span>

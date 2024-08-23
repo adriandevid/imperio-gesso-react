@@ -3,8 +3,6 @@
 	"use strict";
 
 	// Window Resize Mobile Menu Fix
-	mobileNav();
-	welcomeFix();
 
 
 	// Scroll animation init
@@ -17,6 +15,9 @@
 	// }
 
 	$(window).ready(function () {
+		welcomeFix();
+		mobileNav();
+
 		var welcomeSlider = $(".owl-carousel");
 		welcomeSlider.owlCarousel({
 			loop:true,

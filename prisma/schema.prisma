@@ -17,9 +17,19 @@ model products {
 
 /// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
 model services {
-  id          Int     @id @default(autoincrement())
-  title       String  @db.VarChar(200)
-  subtitle    String? @db.VarChar(200)
+  id          Int        @id @default(autoincrement())
+  title       String     @db.VarChar(200)
+  subtitle    String?    @db.VarChar(200)
   description String
-  image       String  @db.VarChar(200)
+  image       String     @db.VarChar(200)
+  requests    requests[]
+}
+
+model requests {
+  id          Int      @id @default(autoincrement())
+  service_id  Int
+  email       String   @db.VarChar(100)
+  phone       String   @db.VarChar(20)
+  name_people String   @db.VarChar(100)
+  services    services @relation(fields: [service_id], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "service_fkey")
 }

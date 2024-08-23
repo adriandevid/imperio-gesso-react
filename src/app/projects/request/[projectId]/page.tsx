@@ -16,6 +16,7 @@ export default async function Page({ params }: { params: { projectId: string } }
         }
     });
 
+
     return (
         <section className="page">
             {/* <div className="cover" data-image="/images/projects/cover.jpg">
@@ -54,15 +55,11 @@ export default async function Page({ params }: { params: { projectId: string } }
 
                             <div className="col-lg-8 col-md-6 col-sm-12">
                                 <div className="contact-form">
-                                    <div className="flex flex-wrap gap-2">
+                                    <div className="flex flex-wrap">
                                         <div className="flex flex-col gap-2 w-full">
                                             <div className="w-full">
                                                 <label htmlFor="link">Serviço: </label>
                                                 <input type="text" name="link" defaultValue={service.title} disabled></input>
-                                            </div>
-                                            <div>
-                                                <label htmlFor="link">Descrição: </label>
-                                                <textarea className="!mb-[0]" name="link" defaultValue={service.description} disabled></textarea>
                                             </div>
                                         </div>
                                         <div className="w-full">
@@ -80,8 +77,8 @@ export default async function Page({ params }: { params: { projectId: string } }
                                             </div>
                                         </div>
                                         <div className="w-full">
-                                            <label htmlFor="descricao">Descrição: </label>
-                                            <textarea className="!mb-[0]" name="descricao" placeholder="Descrição do serviço"></textarea>
+                                            <label htmlFor="link">Descrição: </label>
+                                            <textarea className="!mb-[0]" name="link" defaultValue={service.description} disabled></textarea>
                                         </div>
                                         <div className="flex w-full justify-end gap-2 mt-2">
                                             <Link href={"https://wa.me/5579998152202?text=Tenho%20interesse%20em%20comprar%20seu%20carro"}>
