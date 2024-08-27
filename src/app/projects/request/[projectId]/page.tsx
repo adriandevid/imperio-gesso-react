@@ -1,5 +1,6 @@
 import { faWhatsapp, faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import ServiceRequestClient from "@portfolio/components/pages/services/request";
 import { PrismaClient } from "@prisma/client";
 import Image from "next/image";
 import Link from "next/link";
@@ -10,12 +11,12 @@ export default async function Page({ params }: { params: { projectId: string } }
     const services = await prisma.services.findMany({
         take: 8
     });
+
     const service = await prisma.services.findFirstOrThrow({
         where: {
             id: parseInt(params.projectId)
         }
     });
-
 
     return (
         <section className="page">
@@ -55,44 +56,7 @@ export default async function Page({ params }: { params: { projectId: string } }
 
                             <div className="col-lg-8 col-md-6 col-sm-12">
                                 <div className="contact-form">
-                                    <div className="flex flex-wrap">
-                                        <div className="flex flex-col gap-2 w-full">
-                                            <div className="w-full">
-                                                <label htmlFor="link">Serviço: </label>
-                                                <input type="text" name="link" defaultValue={service.title} disabled></input>
-                                            </div>
-                                        </div>
-                                        <div className="w-full">
-                                            <label htmlFor="nome">Nome: </label>
-                                            <input name="nome" type="text" placeholder="Seu nome" />
-                                        </div>
-                                        <div className="flex gap-2 w-full">
-                                            <div className="w-full">
-                                                <label htmlFor="email">Email: </label>
-                                                <input name="email" className="flex-1" type="text" placeholder="E-Mail" />
-                                            </div>
-                                            <div className="w-full">
-                                                <label htmlFor="telefone">Telefone: </label>
-                                                <input name="telefone" className="flex-1" type="text" placeholder="Telefone" />
-                                            </div>
-                                        </div>
-                                        <div className="w-full">
-                                            <label htmlFor="link">Descrição: </label>
-                                            <textarea className="!mb-[0]" name="link" defaultValue={service.description} disabled></textarea>
-                                        </div>
-                                        <div className="flex w-full justify-end gap-2 mt-2">
-                                            <Link href={"https://wa.me/5579998152202?text=Tenho%20interesse%20em%20comprar%20seu%20carro"}>
-                                                <button className="dark-btn float-right border-green-400">
-                                                    <span className="show-btn !text-green-400"><FontAwesomeIcon icon={faWhatsapp} fontSize={15}></FontAwesomeIcon> Solicitar Via Whatsapp</span>
-                                                    <span className="hide-btn !bg-green-400"><FontAwesomeIcon icon={faWhatsapp} fontSize={15}></FontAwesomeIcon> Solicitar Via Whatsapp</span>
-                                                </button>
-                                            </Link>
-                                            <button className="dark-btn float-right" type="submit">
-                                                <span className="show-btn">Solicitar</span>
-                                                <span className="hide-btn">Solicitar</span>
-                                            </button>
-                                        </div>
-                                    </div>
+                                    <ServiceRequestClient service={service} />
                                 </div>
                             </div>
                         </div>
